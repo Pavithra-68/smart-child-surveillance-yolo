@@ -29,3 +29,12 @@ A Full-Stack AI surveillance solution designed to detect children entering "Dang
 
 ##  System Architecture
 The system utilizes a decoupled architecture where the Flask server handles high-compute AI processing and streams M-JPEG frames to the React client for a low-latency monitoring experience.
+
+## 📸 Project Preview
+
+### Real-Time Monitoring Dashboard
+![Dashboard Screenshot](./screenshots/dashboard.png)
+
+### Automated Email Alert System
+*When a child enters the danger zone, the system captures a frame and sends an instant email.*
+![Email Alert](./screenshots/email_alert.png)
