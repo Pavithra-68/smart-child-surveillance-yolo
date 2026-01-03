@@ -1,36 +1,31 @@
-# smart-child-surveillance-yolo
-A smart surveillance system for child safety using YOLO for object detection and real-time alerts.
-🚨 Child Danger Zone Detection System
-This project is a real-time child detection and alerting system using computer vision. It identifies when a child enters a predefined danger zone using the YOLOv8 object detection model and MediaPipe pose estimation. Alerts are sent via email and SMS, and an image of the alert is saved for history and monitoring.
+# GuardianAI: Smart Child Safety Monitoring System
 
-💡 Features
-🎥 Real-time camera feed processing with YOLOv8 and MediaPipe
+A Full-Stack AI surveillance solution designed to detect children entering "Danger Zones" (e.g., swimming pools, balconies) and trigger real-time alerts.
 
-🧒 Differentiates between Adult and Child based on height estimation
+##  Tech Stack
+- **Frontend:** React.js, Tailwind CSS, Vite
+- **Backend:** Python (Flask), OpenCV
+- **AI/ML:** YOLOv8 (Object Detection), MediaPipe (Pose Estimation)
+- **Alerts:** Twilio API (SMS/WhatsApp), SMTP (Email with Image Attachments)
 
-🔴 Detects when a Child enters a Danger Zone
+##  Key Features
+- **Real-time Detection:** Processes live video streams to identify human figures.
+- **Intelligent Classification:** Differentiates between adults and children using skeletal height-ratio analysis via MediaPipe.
+- **Danger Zone Logic:** Users can define specific pixel coordinates; if a child's center-point enters the zone, an alert triggers.
+- **Automated Alerts:** Sends instant Email notifications with a captured snapshot of the incident.
+- **Professional Dashboard:** A modern React interface to monitor the live feed and system status.
 
-📸 Automatically captures an image when danger is detected
+##  Installation & Setup
+1. **Clone the Repo:** `git clone https://github.com/yourusername/child-safety-ai.git`
+2. **Backend Setup:**
+   - `cd backend`
+   - `pip install -r requirements.txt`
+   - Create a `.env` file with your Twilio/Email credentials.
+   - `python app.py`
+3. **Frontend Setup:**
+   - `cd frontend`
+   - `npm install`
+   - `npm run dev`
 
-📩 Sends Email with image attachment
-
-📱 Sends SMS alert using Twilio
-
-📁 Maintains Alert History with timestamps
-
-🗑️ Allows deletion of specific or all alerts
-
-🧭 View system via a browser-based interface
-
-🛠️ Tech Stack
-Technology	Purpose
-Python	Main programming language
-Flask	Web server framework
-OpenCV	Video and image processing
-YOLOv8	Person detection
-MediaPipe	Pose estimation and landmarks
-Twilio	SMS notification
-SMTP	Email sending with image
-SQLite	(Optional) Alert history database
-HTML/CSS	Frontend templates
-
+##  System Architecture
+The system utilizes a decoupled architecture where the Flask server handles high-compute AI processing and streams M-JPEG frames to the React client for a low-latency monitoring experience.
