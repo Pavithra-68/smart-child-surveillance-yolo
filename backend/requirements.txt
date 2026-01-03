@@ -1,0 +1,7 @@
+flask
+flask-cors
+opencv-python
+ultralytics
+mediapipe
+twilio
+python-dotenv
